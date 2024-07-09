@@ -1,0 +1,2 @@
+PORT = 8000
+MURL=mongodb+srv://anky:<password>@cluster0.cxeg67s.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0/test
