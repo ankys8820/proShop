@@ -23,7 +23,7 @@ const reviewSchema = mongoose.Schema(
       required: true,
     },
   },
-  { timestamps: ture }
+  { timestamps: true }
 );
 //
 const productSchema = new mongoose.Schema(
@@ -53,7 +53,7 @@ const productSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    rewiew: [rewiewSchema],
+    review: [reviewSchema],
     numReviews: {
       type: String,
       required: true,
