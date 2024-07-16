@@ -4,9 +4,12 @@ import { Row, Col, Image, ListGroup, Card, Button } from "react-bootstrap";
 import Rating from "../components/Rating";
 
 const ProductScreen = () => {
+  // const [product, setProduct] = useEffect([]);
+
   const { id: productId } = useParams();
   const product = products.find((p) => p._id === productId);
-  //   console.log(product);
+
+  console.log(products);
   return (
     <>
       <div>

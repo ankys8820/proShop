@@ -1,8 +1,9 @@
 import express from "express";
 import "dotenv/config";
-import products from "./data/products.js";
+
 import cors from "cors";
 import "./db.js";
+import productRoutes from "./routes/productRoutes.js";
 
 const app = express();
 
@@ -13,9 +14,7 @@ app.use(cors());
 app.use(express.json());
 
 // import routes
-app.get("/api/products", (req, res) => {
-  res.send(products);
-});
+app.use("/api/products/", productRoutes);
 
 app.listen(port, () => {
   console.log(`Server is running on ${port}`);
