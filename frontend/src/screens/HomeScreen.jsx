@@ -2,10 +2,12 @@ import { useState, useEffect } from "react";
 import { Row, Col } from "react-bootstrap";
 // import products from "../products";
 import Product from "../components/Product";
+// import { useGetProductQuery } from "../features/products/productApi.js";
 import axios from "axios";
 
 const HomeScreen = () => {
   const [products, setProducts] = useState([]);
+  // const { data: products, isLoading, isError } = useGetProductQuery();
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -15,9 +17,17 @@ const HomeScreen = () => {
     fetchProducts();
   }, []);
 
-  // console.log(products);
   return (
     <>
+      {/* {isLoading ? (
+        <>
+          <h2>Loading.....</h2>
+        </>
+      ) : isError ? (
+        <>
+          <h2>Errorn While Fetching....</h2>
+        </> */}
+      {/* ) : ( */}
       <div>
         <h1>Latest Products</h1>
         <Row>
@@ -29,6 +39,7 @@ const HomeScreen = () => {
           ))}
         </Row>
       </div>
+      {/* )} */}
     </>
   );
 };
